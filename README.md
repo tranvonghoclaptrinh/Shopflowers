@@ -44,10 +44,10 @@ Mọi ý kiến đóng góp hoặc thắc mắc về dự án, vui lòng liên h
 
 GitHub: tranvonghoclaptrinh
 
-Facebook: [Vọng Trần](https://www.google.com/search?q=https://facebook.com/V%E1%BB%8Dng Trần)
+Facebook: [Trần Vọng](https://www.facebook.com/vong.tran.58958343/)
 
 Zalo: 0378133348
 
 Email: tranhuuvong23092006@gmail.com
 
-Dự án thực hiện bởi Vọng Trần - năm 2026
+Dự án thực hiện bởi Trần Hữu Vọng - năm 2026
