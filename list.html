@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh sách Hoa - Danh mục 2 lớp</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-glass py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="brand h5 mb-0" href="index.html">FlowerVN</a>
+      <div class="catbar">
+      </div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost btn-sm" href="login.html">Đăng nhập</a>
+        <a class="btn btn-brand btn-sm" href="cart.html">Giỏ hàng</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="cat-tree">
+            <details open>
+              <summary>Hoa theo Dịp</summary>
+              <div class="children">
+                <a href="list.html?cha=occasion&con=birthday" class="active">Sinh nhật</a>
+                <a href="list.html?cha=occasion&con=grandopening">Khai trương</a>
+                <a href="list.html?cha=occasion&con=anniversary">Kỷ niệm</a>
+                <a href="list.html?cha=occasion&con=congrats">Chúc mừng</a>
+              </div>
+            </details>
+            <details>
+              <summary>Hoa theo Người nhận</summary>
+              <div class="children">
+                <a href="list.html?cha=recipient&con=for-mom">Tặng Mẹ</a>
+                <a href="list.html?cha=recipient&con=for-friend">Tặng Bạn</a>
+                <a href="list.html?cha=recipient&con=for-partner">Đối tác</a>
+              </div>
+            </details>
+            <details>
+              <summary>Hoa theo Màu sắc</summary>
+              <div class="children">
+                <a href="list.html?cha=color&con=red">Đỏ</a>
+                <a href="list.html?cha=color&con=white">Trắng</a>
+                <a href="list.html?cha=color&con=pastel">Pastel</a>
+              </div>
+            </details>
+          </div>
+          <div class="card shadow-sm mt-3">
+            <div class="card-body">
+              <h6 class="mb-2">Bộ lọc</h6>
+              <form>
+                <div class="mb-2">
+                  <label class="form-label">Khoảng giá</label>
+                  <select class="form-select" name="khoanggia">
+                    <option value="-">Tất cả</option>
+                    <option value="-300000">&lt; 300k</option>
+                    <option value="300000-600000">300-600k</option>
+                    <option value="600000-">&gt; 600k</option>
+                  </select>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label">Tìm kiếm</label>
+                  <input class="form-control" placeholder="Tên bó hoa..." name="kw">
+                </div>
+                <hr>
+                <div class="d-grid"><button type="submit" class="btn btn-brand btn-rounded">Tìm kiếm</button></div>
+                <div class="kit-note mt-2">Tìm kiếm với từ khóa và khoảng giá.</div>
+              </form>
+            </div>
+          </div>
+        </aside>
+
+        <!--Start main -->
+
+        <main class="col-12 col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="small">Đang xem: <strong>Dịp / Sinh nhật</strong></div>
+            <div class="small">Sắp xếp: <strong>Phổ biến</strong></div>
+          </div>
+          <div class="grid-tiles">
+            <!-- 1 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/1.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Hồng Pastel 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-001</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Hoa hồng phối baby tông pastel</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫450k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/2.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Hồng Pastel 02</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-002</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Hoa hồng pastel giấy gói cao cấp</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫470k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/3.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Sinh Nhật 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-003</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Bó tặng sinh nhật tươi 3–5 ngày</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫380k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/4.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Khai Trương 01</a>
+                  </h4>
+                  <span class="badge badge-soft" title="SKU">FLR-004</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Bó hoa chúc mừng khai trương</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫520k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/5.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Chúc Mừng 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-005</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Bó rực rỡ tông đỏ vàng</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫490k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/6.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Trắng Thanh
+                      Lịch</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-006</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Hoa trắng chủ đạo</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫410k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/7.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Pastel Ngọt
+                      Ngào</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-007</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Phối nhiều tông pastel</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫465k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/8.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Tặng Mẹ 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-008</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Bó nhẹ nhàng cho Mẹ</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫430k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/9.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Đối Tác 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-009</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Thanh lịch cho đối tác</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫620k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 10 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/10.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Người Thương 01</a>
+                  </h4>
+                  <span class="badge badge-soft" title="SKU">FLR-010</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Lãng mạn cho người thương</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫520k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 11 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/11.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Bạn Bè 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-011</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Trẻ trung cho bạn bè</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫350k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 12 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/12.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Bó Vàng Ấm Áp</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-012</span>
+                </div>
+                <div class="text-muted small mt-1">Sinh nhật • Tông vàng nổi bật</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫480k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 13 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/13.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Khai Trương 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-013</span>
+                </div>
+                <div class="text-muted small mt-1">Khai trương • Giỏ hoa chúc mừng khai trương sang trọng</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫520k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 14 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/14.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Khai Trương 02</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-014</span>
+                </div>
+                <div class="text-muted small mt-1">Khai trương • Bình hoa tone đỏ vàng rực rỡ</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫560k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 15 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/15.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Khai Trương 03</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-015</span>
+                </div>
+                <div class="text-muted small mt-1">Khai trương • Giỏ hoa chúc mừng thành công</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫600k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 16 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/16.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Khai Trương 04</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-016</span>
+                </div>
+                <div class="text-muted small mt-1">Khai trương • Bó hoa hồng vàng tươi</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫490k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 17 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/17.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Khai Trương 05</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-017</span>
+                </div>
+                <div class="text-muted small mt-1">Khai trương • Lẵng hoa phong cách hiện đại</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫580k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 18 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/18.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Kỷ Niệm 01</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-018</span>
+                </div>
+                <div class="text-muted small mt-1">Kỷ niệm • Hoa hồng và baby nhẹ nhàng</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫450k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 19 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/19.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Kỷ Niệm 02</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-019</span>
+                </div>
+                <div class="text-muted small mt-1">Kỷ niệm • Bó pastel cho ngày kỷ niệm</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫470k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 20 -->
+            <article class="card-product">
+              <a href="detail.html">
+                <div class="thumb" style="background-image:url('assets/img/20.jpg')"></div>
+              </a>
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="h6 mb-0"><a href="detail.html" class="link-dark">Kỷ Niệm 03</a></h4>
+                  <span class="badge badge-soft" title="SKU">FLR-020</span>
+                </div>
+                <div class="text-muted small mt-1">Kỷ niệm • Giỏ hoa tình yêu</div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="fw-semibold">₫500k</span>
+                  <span class="badge bg-light text-dark" title="Tồn">999</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </main>
+
+        <!--End main -->
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <h5 class="mb-2 text-white">FlowerVN</h5>
+          <p class="mb-0">Cửa hàng hoa trực tuyến - Giao diện mẫu phục vụ bài kiểm tra Lập trình Web.</p>
+        </div>
+        <div class="col-12 col-md-3">
+          <h6 class="text-white">Liên kết</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="list.html">Danh sách</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><a href="login.html">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex justify-content-between small">
+        <span>© 2025 FlowerVN</span>
+        <span>Bootstrap 5 + CSS thuần, không JS</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

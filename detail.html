@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết - Bó Hồng Pastel</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-glass py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="brand h5 mb-0" href="index.html">FlowerVN</a>
+      <div class="catbar">
+      </div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost btn-sm" href="login.html">Đăng nhập</a>
+        <a class="btn btn-brand btn-sm" href="cart.html">Giỏ hàng</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="cat-tree">
+            <details open>
+              <summary>Hoa theo Dịp</summary>
+              <div class="children">
+                <a href="list.html?cha=occasion&con=birthday">Sinh nhật</a>
+                <a href="list.html?cha=occasion&con=grandopening">Khai trương</a>
+                <a href="list.html?cha=occasion&con=anniversary">Kỷ niệm</a>
+                <a href="list.html?cha=occasion&con=congrats">Chúc mừng</a>
+              </div>
+            </details>
+            <details>
+              <summary>Hoa theo Người nhận</summary>
+              <div class="children">
+                <a href="list.html?cha=recipient&con=for-mom">Tặng Mẹ</a>
+                <a href="list.html?cha=recipient&con=for-friend">Tặng Bạn</a>
+                <a href="list.html?cha=recipient&con=for-partner">Đối tác</a>
+              </div>
+            </details>
+            <details>
+              <summary>Hoa theo Màu sắc</summary>
+              <div class="children">
+                <a href="list.html?cha=color&con=red">Đỏ</a>
+                <a href="list.html?cha=color&con=white">Trắng</a>
+                <a href="list.html?cha=color&con=pastel">Pastel</a>
+              </div>
+            </details>
+          </div>
+          <div class="card shadow-sm mt-3">
+            <div class="card-body">
+              <h6 class="mb-2">Bộ lọc</h6>
+              <form>
+                <div class="mb-2">
+                  <label class="form-label">Khoảng giá</label>
+                  <select class="form-select" name="khoanggia">
+                    <option value="-">Tất cả</option>
+                    <option value="-300000">&lt; 300k</option>
+                    <option value="300000-600000">300-600k</option>
+                    <option value="600000-">&gt; 600k</option>
+                  </select>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label">Tìm kiếm</label>
+                  <input class="form-control" placeholder="Tên bó hoa..." name="kw">
+                </div>
+                <hr>
+                <div class="d-grid"><button type="submit" class="btn btn-brand btn-rounded">Tìm kiếm</button></div>
+                <div class="kit-note mt-2">Tìm kiếm với từ khóa và khoảng giá.</div>
+              </form>
+            </div>
+          </div>
+        </aside>
+
+        <!--Start main -->
+
+        <main class="col-12 col-lg-9">
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-7">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="ratio ratio-16x9 rounded-3 bg-light border"
+                    style="background:url('assets/img/1.jpg') center/cover no-repeat;"></div>
+                  <div class="row g-2 mt-2">
+                    <div class="col">
+                      <div class="ratio ratio-4x3 rounded-3 bg-light border"
+                        style="background:url('assets/img/hinhphu_0.jpg') center/cover no-repeat;"></div>
+                    </div>
+                    <div class="col">
+                      <div class="ratio ratio-4x3 rounded-3 bg-light border"
+                        style="background:url('assets/img/hinhphu_1.jpg') center/cover no-repeat;"></div>
+                    </div>
+                    <div class="col">
+                      <div class="ratio ratio-4x3 rounded-3 bg-light border"
+                        style="background:url('assets/img/hinhphu_2.jpg') center/cover no-repeat;"></div>
+                    </div>
+                    <div class="col">
+                      <div class="ratio ratio-4x3 rounded-3 bg-light border"
+                        style="background:url('assets/img/hinhphu_3.jpg') center/cover no-repeat;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow-sm mt-3">
+                <div class="card-body">
+                  <h5 class="mb-2">Mô tả</h5>
+                  <p>Bó hồng phối baby tông pastel, giấy gói cao cấp, nơ lụa.</p>
+                  <ul class="mb-0">
+                    <li>Kích thước: tiêu chuẩn ~ 18-22 bông</li>
+                    <li>Phụ kiện: thiệp chúc mừng miễn phí</li>
+                    <li>Bảo quản: tránh nắng gắt, thay nước mỗi ngày</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <nav class="small mb-2 text-muted">Dịp / <strong>Sinh nhật</strong></nav>
+                  <h3 class="h5 mb-0">Bó Hồng Pastel • Tươi 3-5 ngày</h3>
+                  <div class="mt-2"><span class="h4">₫450k</span></div>
+                  <hr>
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Số lượng</label>
+                      <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Lời chúc</label>
+                      <input class="form-control" placeholder="Chúc mừng sinh nhật...">
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button type="submit" class="btn btn-brand btn-rounded">Thêm vào giỏ</button>
+                    </div>
+                    <div class="kit-note mt-2">Form post đến giỏ khi làm bài; breadcrumb lấy từ danh mục cha-con.</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!--End main -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="mt-5">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <h5 class="mb-2 text-white">FlowerVN</h5>
+          <p class="mb-0">Cửa hàng hoa trực tuyến - Giao diện mẫu phục vụ bài kiểm tra Lập trình Web.</p>
+        </div>
+        <div class="col-12 col-md-3">
+          <h6 class="text-white">Liên kết</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="list.html">Danh sách</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><a href="login.html">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex justify-content-between small">
+        <span>© 2025 FlowerVN</span>
+        <span>Bootstrap 5 + CSS thuần, không JS</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
