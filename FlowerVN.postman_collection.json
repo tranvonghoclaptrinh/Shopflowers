@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "FlowerVN - Business and Concurrency Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://your-vercel-domain.vercel.app" },
+    { "key": "productId", "value": "1" },
+    { "key": "productIdLowStock", "value": "2" },
+    { "key": "uniqueKey", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Smoke",
+      "item": [
+        {
+          "name": "List products",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/products?limit=10", "host": ["{{baseUrl}}"], "path": ["api", "products"], "query": [{"key":"limit","value":"10"}] } },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('HTTP 200', () => pm.response.to.have.status(200));", "const data = pm.response.json();", "pm.expect(data).to.be.an('array');", "if (data.length) pm.environment.set('productId', data[0].id);"] } }]
+        },
+        {
+          "name": "Search and price filter",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/products?search=hoa&min_price=200000&max_price=800000&limit=50", "host": ["{{baseUrl}}"], "path": ["api", "products"], "query": [{"key":"search","value":"hoa"},{"key":"min_price","value":"200000"},{"key":"max_price","value":"800000"},{"key":"limit","value":"50"}] } },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('HTTP 200', () => pm.response.to.have.status(200));", "pm.response.json().forEach(p => { pm.expect(Number(p.price)).to.be.at.least(200000); pm.expect(Number(p.price)).to.be.at.most(800000); });"] } }]
+        }
+      ]
+    },
+    {
+      "name": "Idempotency",
+      "item": [
+        {
+          "name": "Create order - first request",
+          "event": [{ "listen": "prerequest", "script": { "exec": ["pm.environment.set('uniqueKey', `postman-${pm.variables.replaceIn('{{$guid}}')}`);"] } }, { "listen": "test", "script": { "exec": ["pm.test('HTTP 201', () => pm.response.to.have.status(201));", "const body = pm.response.json();", "pm.expect(body.duplicate).to.eql(false);", "pm.environment.set('orderId', body.id);"] } }],
+          "request": { "method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "body": {"mode":"raw","raw":"{\n  \"receiver_name\": \"Nguyen Van Test\",\n  \"receiver_phone\": \"0901234567\",\n  \"delivery_address\": \"12 Nguyen Hue, Quan 1, TP.HCM\",\n  \"payment_method\": \"cod\",\n  \"idempotency_key\": \"{{uniqueKey}}\",\n  \"items\": [{ \"product_id\": {{productId}}, \"quantity\": 1 }]\n}"}, "url": {"raw":"{{baseUrl}}/api/orders","host":["{{baseUrl}}"],"path":["api","orders"]} }
+        },
+        {
+          "name": "Create order - retry same key",
+          "request": { "method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "body": {"mode":"raw","raw":"{\n  \"receiver_name\": \"Nguyen Van Test\",\n  \"receiver_phone\": \"0901234567\",\n  \"delivery_address\": \"12 Nguyen Hue, Quan 1, TP.HCM\",\n  \"payment_method\": \"cod\",\n  \"idempotency_key\": \"{{uniqueKey}}\",\n  \"items\": [{ \"product_id\": {{productId}}, \"quantity\": 1 }]\n}"}, "url": {"raw":"{{baseUrl}}/api/orders","host":["{{baseUrl}}"],"path":["api","orders"]} },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('HTTP 200 on duplicate', () => pm.response.to.have.status(200));", "pm.expect(pm.response.json().duplicate).to.eql(true);", "pm.expect(Number(pm.response.json().id)).to.eql(Number(pm.environment.get('orderId')));"] } }]
+        }
+      ]
+    },
+    {
+      "name": "Negative",
+      "item": [
+        {
+          "name": "Reject empty cart",
+          "request": { "method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "body": {"mode":"raw","raw":"{\n  \"receiver_name\": \"Nguyen Van Test\",\n  \"receiver_phone\": \"0901234567\",\n  \"delivery_address\": \"12 Nguyen Hue, Quan 1, TP.HCM\",\n  \"items\": []\n}"}, "url": {"raw":"{{baseUrl}}/api/orders","host":["{{baseUrl}}","api","orders"]} },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('HTTP 400', () => pm.response.to.have.status(400));"] } }]
+        },
+        {
+          "name": "Reject invalid product",
+          "request": { "method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "body": {"mode":"raw","raw":"{\n  \"receiver_name\": \"Nguyen Van Test\",\n  \"receiver_phone\": \"0901234567\",\n  \"delivery_address\": \"12 Nguyen Hue, Quan 1, TP.HCM\",\n  \"items\": [{ \"product_id\": 999999999, \"quantity\": 1 }]\n}"}, "url": {"raw":"{{baseUrl}}/api/orders","host":["{{baseUrl}}"],"path":["api","orders"]} },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('HTTP 400', () => pm.response.to.have.status(400));"] } }]
+        }
+      ]
+    }
+  ]
+}
